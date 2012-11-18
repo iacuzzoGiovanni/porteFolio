@@ -1,0 +1,61 @@
+{
+  "name": "",
+  "glyphs": [
+    {
+      "uid": "bbd66ef66bb8fa9edde54d9a90b89150",
+      "orig_css": "user",
+      "orig_code": 128100,
+      "css": "user",
+      "code": 128100,
+      "src": "entypo"
+    },
+    {
+      "uid": "587bjlxppui6u4japooa2foe58rsvicp",
+      "orig_css": "pencil",
+      "orig_code": 9998,
+      "css": "pencil",
+      "code": 9998,
+      "src": "modernpics"
+    },
+    {
+      "uid": "cc4e62d1721c863fdc6944d2fd87521d",
+      "orig_css": "linkedin",
+      "orig_code": 76,
+      "css": "linkedin",
+      "code": 76,
+      "src": "zocial"
+    },
+    {
+      "uid": "a58032f4aafd0eec54803075f5b320d4",
+      "orig_css": "email",
+      "orig_code": 93,
+      "css": "email",
+      "code": 93,
+      "src": "zocial"
+    },
+    {
+      "uid": "6f7586c6f99798c3c1de6123d1f6cfa9",
+      "orig_css": "facebook",
+      "orig_code": 102,
+      "css": "facebook",
+      "code": 102,
+      "src": "zocial"
+    },
+    {
+      "uid": "4c01f5d3ba5fbf029bca8630cce41e6a",
+      "orig_css": "twitter-bird",
+      "orig_code": 62211,
+      "css": "twitter-bird",
+      "code": 62211,
+      "src": "brandico"
+    },
+    {
+      "uid": "db112402805d9dadc01ce009fbfdb914",
+      "orig_css": "paper-plane",
+      "orig_code": 59291,
+      "css": "paper-plane",
+      "code": 59291,
+      "src": "entypo"
+    }
+  ]
+}

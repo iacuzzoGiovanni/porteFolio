@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+
+.icon-linkedin:before { content: '\4c'; } /* 'L' */
+.icon-email:before { content: '\5d'; } /* ']' */
+.icon-facebook:before { content: '\66'; } /* 'f' */
+.icon-pencil:before { content: '\270e'; } /* '✎' */
+.icon-paper-plane:before { content: '\e79b'; } /* '' */
+.icon-twitter-bird:before { content: '\f303'; } /* '' */
+.icon-user:before { content: '👤'; } /* '\1f464' */

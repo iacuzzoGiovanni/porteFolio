@@ -8,6 +8,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: dark, light, white, black, gray, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
 Text Domain: twentyeleven
 */
+@import url('./fontello/css/fontello.css');
 @import url("./reset.css");
 /* ==========================================================================
    HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
@@ -70,33 +71,33 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+
 body{
     font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: #f1f2f2;
     background-image: url("./img/light_wool.png");
-    text-shadow: 0px 1px 0px #ffffff;
-    filter: dropshadow(color=#ffffff, offx=0, offy=1);
 }
 
-header#first{
+#first{
     margin: 3em auto;
-    max-width: 1000px;
+    max-width: 960px;
     overflow: hidden;
 }
 
-h1#GioIac a{
+#GioIac a{
     font-size: 2.85em;
     text-decoration: none;
     color: #000;
     font-weight: lighter;
+    position: relative;
+    top: -0.1em;
 }
 
-h1#GioIac a strong{
+#GioIac strong{
     font-weight: bold;
     margin-left: 0.2em;
 }
 
-h1#GioIac+h2{
+#GioIac+h2{
     color: #00afec;
     position: relative;
     top: -1em;
@@ -105,15 +106,15 @@ h1#GioIac+h2{
 
 hgroup{
     float: left;
+    position: relative;
+    top: -0.25em;
 }
 
 nav{
     float: right;
-    position: relative;
-    top: 1em;
 }
 
-nav ul li{
+nav li{
     display: inline-block;
     text-align: center;
     overflow: hidden;
@@ -121,7 +122,7 @@ nav ul li{
     position: relative;
 }
 
-nav ul li a{
+nav a{
     display: inline-block;
     text-decoration: none;
     text-shadow: none;
@@ -129,6 +130,11 @@ nav ul li a{
     font-size: 1.2em;
     width: 96px;
     padding: 1em;
+    margin-right: 0.5em;
+}
+
+nav li:last-child a{
+    margin-right: 0;
 }
 
 .navMask{
@@ -160,24 +166,28 @@ nav ul li a{
     opacity: 1;
 }
 
-section#home, #about header, #work header, .infoMask h3, body>footer, #contact header, #workTitle, .message h1{
+section#home, #about header, #work header, .infoMask h3, body>footer, #contact header, #workTitle{
     background-image: url("./img/dark_mosaic.png");
 }
 
+#about span, nav a, #about footer a, #work footer a, #contact footer a, .social a{
+    background-image: url("./img/sprite.png");
+}
+
 nav a{
-    background-image: url("./img/nav.png");
     -webkit-transition: background-position .2s ease-in;
     -moz-transition: background-position .2s ease-in;
     -o-transition: background-position .2s ease-in;
     transition: background-position .2s ease-in;
+    background-position: -8px -123px;
 }
 
 nav a:hover{
-    background-position: 0 67px;
+    background-position: -8px -190px;
 }
 
 section#home p{
-    max-width: 1000px;
+    max-width: 960px;
     margin: 0 auto;
     color: #00afec;
     font-size: 3.5em;
@@ -186,13 +196,13 @@ section#home p{
     text-shadow: none;
 }
 
-section#home p strong{
+section#home strong{
     font-size: 1.3em;
     font-weight: bold;
 }
 
 #about, #work, #contact{
-    max-width: 1000px;
+    max-width: 960px;
     margin: 0 auto;
     overflow: hidden;
     margin-bottom: 2em;
@@ -207,10 +217,18 @@ section#home p strong{
     text-align: center;
 }
 
+#about h1, #work h1, #contact h1{
+    font-size: 1.3em;
+}
+
 #about h2, #work h2, #contact h2{
-    font-size: 1.5em;
+    font-size: 2em;
     margin-top: 1em;
     font-weight: bold;
+}
+
+#about h2{
+    margin-bottom: 0.2em;
 }
 
 #work h2{
@@ -222,6 +240,7 @@ section#home p strong{
     width: 130px;
     margin-right: 16px;
     margin-bottom: 2em;
+    font-size: 1.2em;
 }
 
 #about div{
@@ -230,8 +249,8 @@ section#home p strong{
     -moz-border-radius: 2px;
     border-radius: 2px;
     border-bottom: 1px solid #fff;
-    -webkit-box-shadow: inset 0px 1px 0px 0px #333; 
-    box-shadow: inset 0px 1px 0px 0px #333;
+    -webkit-box-shadow: 0 1px 0 0 rgba(0,0,0,0.2) inset; 
+    box-shadow: 0 1px 0 0 rgba(0,0,0,0.2) inset;
 }
 
 #about span{
@@ -243,10 +262,11 @@ section#home p strong{
     -moz-border-radius-bottomleft: 2px;
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
-    height: 23px;
-    line-height: 22px;
-    background-image: url("./img/progressBar.png");
-    background-position: 0 -15px;
+    height: 31px;
+    background-position: -50px -390px;
+    background-repeat: repeat-x;
+    -webkit-box-shadow: 0 1px 0 0 rgba(0,0,0,0.2) inset; 
+    box-shadow: 0 1px 0 0 rgba(0,0,0,0.2) inset;;
 }
 
 #about span.v10{
@@ -274,12 +294,12 @@ section#home p strong{
     display: inline-block;
     width: 50px;
     height: 50px;
-    background-image: url("./img/goToTopTop.png");
     text-indent: -9999px;
+    background-position: -8px -15px;
 }
 
 #about a:hover, #work a:hover, #contact a:hover{
-    background-position: 0 50px;
+    background-position: -8px -65px;
 }
 
 #about article{
@@ -297,17 +317,22 @@ section#home p strong{
     text-decoration: underline;
 }
 
-#work article{
-    text-align: center;
+#about article+article p{
+    font-size: 1.2em;
+    margin-bottom: 2em;
 }
 
 .imgWork{
     border: 1px solid #aaa;
     display: inline-block;
-    margin: 1.5% 1em;
     overflow: hidden;
     width: 270px;
     height: 220px;
+    margin: 2.5%;
+}
+
+#work article{
+    padding-top: 2em;
 }
 
 .infoMask{
@@ -418,75 +443,105 @@ section#home p strong{
     display: inline-block;
 }
 
-#contact iframe{
+#gmap{
     width: 100%;
     height: 22em;
     margin-bottom: 1em;
 }
 
-#contact h3{
-    font-weight: bold;
+#contact article{
+    margin-top: 3em;
 }
 
-#contact section+section h3+p+p{
-    margin-bottom: 1em;
-}
-
-#contact section{
-    float: left;
-    overflow: hidden;
-    width: 25%;
-}
-#contact section+section{
-    float: right;
-    overflow: hidden;
-    width: 75%;
-}
-
-#contact fieldset{
-    margin-bottom: 1em;
-}
-
-#contact fieldset:first-child input{
-    display: block;
-    padding: 0.4em;
-    margin: 1em 1em 1em 0;
-    border: 1px solid #BBBBBB;
-    -webkit-box-shadow: 0 0 2px 1px #DDDDDD inset;
-    -moz-box-shadow: 0 0 2px 1px #DDDDDD inset;
-    box-shadow: 0 0 2px 1px #DDDDDD inset;
-}
-
-#contact fieldset:first-child{
+#country, #coord{
     float: left;
 }
 
-#contact textarea{
-    width: 95%;
-    height: 10em;
-    border: 1px solid #bbb;
-    -webkit-box-shadow: 0 0 2px 1px #ddd inset;
-    -moz-box-shadow: 0 0 2px 1px #ddd inset;
-    box-shadow: 0 0 2px 1px #ddd inset;
-    padding: 1em;
-    margin-top: 0.85em;
+#coord{
+    margin-left: 4em;
+    width: 30em;
 }
 
-#submitContact{
-    text-align: center;
-}
-
-#submitContact input{
-    border: 1px solid #bbb;
-    font-size: 1.1em;
+#coord h3{
+    font-size: 1.5em;
     font-weight: bold;
-    padding: 0.5em 1em;
 }
 
-#submitContact input:hover{
-    -webkit-box-shadow: 0 0 2px 1px #ccc inset;
-    -moz-box-shadow: 0 0 2px 1px #ccc inset;
-    box-shadow: 0 0 2px 1px #ccc inset;
+#coord p{
+    margin-bottom: 1em;
+}
+
+#coord input{
+    margin-bottom: 1em;
+    width: 50%;
+    padding-left: 3em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border: 1px solid #000;
+}
+
+#coord textarea{
+    width: 88%;
+    padding-left: 3em;
+    padding-top: 0.5em;
+    padding-right: 0.5em;
+    resize: none;
+    border: 1px solid #000;
+}
+
+#wpcf7-f74-p17-o1{
+    margin-top: 0.5em;
+}
+
+#wpcf7-f74-p17-o1 div{
+    position: relative;
+} 
+
+.icon-pencil, .icon-email, .icon-user{
+    position: absolute;
+    z-index: 100;
+    left: 0.7em;
+    border-right: 1px solid #000;
+    padding-right: 0.4em;
+}
+
+.icon-pencil{
+    height: 90%;
+    line-height: 180px;
+    top: 0.6em;
+}
+
+.icon-email{
+    top: 0.4em;
+}
+
+.icon-user{
+    top: 0.4em;
+}
+
+.icon-paper-plane{
+    position: inherit;
+}
+
+#wpcf7-f74-p17-o1 button{
+    width: 100%;
+    border: 1px solid #0067b3;
+    padding: 0.5em;
+    background: #00a4ed; /* Old browsers */
+    background: -moz-linear-gradient(top,  #00a4ed 0%, #0084cf 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00a4ed), color-stop(100%,#0084cf)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #00a4ed 0%,#0084cf 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #00a4ed 0%,#0084cf 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #00a4ed 0%,#0084cf 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #00a4ed 0%,#0084cf 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a4ed', endColorstr='#0084cf',GradientType=0 ); /* IE6-9 */
+    margin-top: 1em;
+    color: #fff;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #aaa;    
+    box-shadow: inset 0px 1px 0px 0px #aaa;
+    text-shadow: 0px 1px 0px #555;
+    filter: dropshadow(color=#555, offx=0, offy=1);
+    margin-bottom: 3em;
 }
 
 body>footer section{
@@ -502,20 +557,20 @@ body>footer section{
     display: inline-block;
     height: 50px;
     width: 50px;
-    background-image: url(./img/socialIcon.png);
     text-indent: -9999px;
+    background-position: -8px -268px;
 }
 
 .social a:hover{
-    background-position: 0px 50px;
+    background-position: -8px -318px;
 }
 
 li.social+li a{
-    background-position: 50px 0px;
+    background-position: -58px -268px;
 }
 
 li.social+li a:hover{
-    background-position: 50px 50px;
+    background-position: -58px -318px;
 }
 
 #copy{
@@ -591,59 +646,26 @@ h2#workTitle{
 #blog{
     max-width: 1000px;
     margin: 0 auto;
-    overflow: hidden;
 }
 
-.article{
+.blog{
+    background-color: #fff;
+    -webkit-box-shadow:  0px 3px 5px 0px rgba(0, 0, 0, 0.2); 
+    box-shadow:  0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    position: relative;
     overflow: hidden;
+    padding: 1em;
+}
+
+.avatar, .jour{
+    display: inline-block;
 }
 
 .avatar{
-    float: left;
-    padding-right: 0.5em;
-    border-right: 1px solid #aaa;
+    position: relative;
+    top: -2em;
 }
 
-.avatar img{
-    border: none;
-}
-
-.avatar p{
-    font-size: 12px;
-    width: 96px;
-    text-align: right;
-}
-
-.avatar strong{
-    font-weight: bold;
-}
-
-.message{
-    float: left;
-    width: 87.1%;
-    margin-left: 16px;
-}
-
-.message a{
-    color: #fff;
-    display: inline-block;
-    padding: 0.5em;
-    text-shadow: none;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.message p{
-    margin-top: 0.5em;
-}
-
-.notComments{
-    overflow: hidden;
-}
-
-.comments{
-    padding-left: 128px;
-}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -711,10 +733,19 @@ h2#workTitle{
     #work article{
         text-align: center;
     }
+
+    nav li{
+        display: block;
+    }
 }
 
 @media only screen and (max-width: 480px){
     
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for high resolution devices */
 } 
 /* ==========================================================================
    Helper classes

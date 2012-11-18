@@ -27,30 +27,27 @@
         	while($query->have_posts()):
         		$query->the_post();
         ?>
-        	<div class="article">	
-                	<div class="notComments">
-                                <div class="avatar">
-                			<?php 
-        	        			$email = get_the_author_meta('user_email');
-        	        			$alt = 'photo de Iacuzzo Giovanni';
-        	        			echo get_avatar($email, $size,  $defaults, $alt);
-                		 	?>
-                                        <p>auteur</p>
-                		 	<p><strong><?php echo get_the_author_meta('first_name'); ?></strong></p>
-                                        <p>posté le</p>
-                		 	<p><strong><?php the_date(); ?></strong></p>
-                		</div>
-                		<div class="message">
-        	        		<h1>
-        	        			<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-        	        		</h1>
-        	        		<?php the_content(); ?>
-                		</div>
-                        </div>
-                        <div class="comments">
-                                <?php comments_template(); ?>
-                        </div>
-        	</div>
+        	<article class="blog">
+    			<div class="avatar">
+                    <?php 
+                        $email = get_the_author_meta('user_email');
+                        $alt = 'photo de Iacuzzo Giovanni';
+                        echo get_avatar($email, $size,  $defaults, $alt);
+                    ?>
+                </div>
+                <div class="jour">
+                    <p><?php echo get_the_date('j'); ?></p>
+                    <p><?php echo substr(get_the_date('F'), 0, 3); ?></p>
+                </div>
+                <div class="message">
+                    <h1>
+                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    </h1>
+                    <p>posté à <strong><?php the_time('G:i'); ?></strong> par <strong><?php echo get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name'); ?></strong> en <strong><?php echo get_the_date('Y'); ?></strong></p>
+                   
+                    <?php the_content(); ?>
+                </div>
+        	</article>
         <?php
         	endwhile;
         ?>

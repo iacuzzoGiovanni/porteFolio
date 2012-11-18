@@ -23,8 +23,9 @@
                 <p>2012-Designed by Iacuzzo Giovanni©</p>
             </section>
         </footer>
-        <script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.8.2.js" type="text/javascript"></script>
-        <script src="<?php bloginfo('template_directory'); ?>/js/script.js" type="text/javascript"></script>
+        <script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.8.2.js"></script>
+        <script src="<?php bloginfo('template_directory'); ?>/js/plugins.js"></script>
+        <script src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
         <?php wp_footer(); ?>
     </body>
 </html>
