@@ -170,8 +170,8 @@ section#home, #about header, #work header, .infoMask h3, body>footer, #contact h
     background-image: url("./img/dark_mosaic.png");
 }
 
-#about span, nav a, #about footer a, #work footer a, #contact footer a, .social a{
-    background-image: url("./img/sprite.png");
+#about span, nav a, #about footer a, #work footer a, #contact footer a, .social a, #country a{
+    background-image: url("./img/sprite2.png");
 }
 
 nav a{
@@ -179,11 +179,11 @@ nav a{
     -moz-transition: background-position .2s ease-in;
     -o-transition: background-position .2s ease-in;
     transition: background-position .2s ease-in;
-    background-position: -8px -123px;
+    background-position: -8px -116px;
 }
 
 nav a:hover{
-    background-position: -8px -190px;
+    background-position: -8px -183px;
 }
 
 section#home p{
@@ -263,7 +263,7 @@ section#home strong{
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
     height: 31px;
-    background-position: -50px -390px;
+    background-position: 0 -380px;
     background-repeat: repeat-x;
     -webkit-box-shadow: 0 1px 0 0 rgba(0,0,0,0.2) inset; 
     box-shadow: 0 1px 0 0 rgba(0,0,0,0.2) inset;;
@@ -295,11 +295,11 @@ section#home strong{
     width: 50px;
     height: 50px;
     text-indent: -9999px;
-    background-position: -8px -15px;
+    background-position: -8px -8px;
 }
 
 #about a:hover, #work a:hover, #contact a:hover{
-    background-position: -8px -65px;
+    background-position: -8px -58px;
 }
 
 #about article{
@@ -457,9 +457,32 @@ section#home strong{
     float: left;
 }
 
+#country a{
+    display: inline-block;
+    width: 414px;
+    height: 326px;
+    background-position: -3px -434px;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+#country a:hover{
+    background-position: -3px -771px;
+}
+
 #coord{
     margin-left: 4em;
     width: 30em;
+}
+
+#coord label{
+    cursor: pointer;
+}
+
+#coord label span{
+    text-indent: -9999px;
+    display: inline-block;
+    width: 0;
 }
 
 #coord h3{
@@ -469,6 +492,12 @@ section#home strong{
 
 #coord p{
     margin-bottom: 1em;
+}
+
+#coord a{
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #00a4ed;
 }
 
 #coord input{
@@ -489,11 +518,15 @@ section#home strong{
     border: 1px solid #000;
 }
 
-#wpcf7-f74-p17-o1{
+#coord strong{
+    color: #00a4ed;
+}
+
+#contactForm{
     margin-top: 0.5em;
 }
 
-#wpcf7-f74-p17-o1 div{
+#contactForm div{
     position: relative;
 } 
 
@@ -523,7 +556,7 @@ section#home strong{
     position: inherit;
 }
 
-#wpcf7-f74-p17-o1 button{
+#contactForm button{
     width: 100%;
     border: 1px solid #0067b3;
     padding: 0.5em;
