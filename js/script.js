@@ -7,42 +7,54 @@
 	//globals
 
 	//methods
-	/*var generateMap = function(){
-		var styles = [
-			{
-				stylers: [{saturation: -100}]
-			}
-		]
-
-		var styledMap = new google.maps.StyledMapType(styles,
-	    {name: "Styled Map"});
-
-	    var mapOptions = {
-		    zoom: 15,
-		    mapTypeId:google.maps.MapTypeId.ROADMAP,
-		    center: new google.maps.LatLng(50.6402707, 5.6204945)
-		    };
-
-		var map = new google.maps.Map(document.getElementById('gmap'),
-	    mapOptions);
-
-	    map.mapTypes.set('map_style', styledMap);
-	    map.setMapTypeId('map_style');
-	}*/
 
 	var smoothScroll = function(e){
-		var the_id = $(this).attr("href");
-		console.log('coucou');  
+		var the_id = $(this).attr("href"); 
 	    $('html, body').animate({  
 	        scrollTop:$(the_id).offset().top  
 	    }, 'slow');  
 	    return false; 
 	};
 
+	var checkContactForm = function(e){
+		e.preventDefault();
+		
+		var sNom = $('#nom').val();
+		var sEmail = $('#email').val();
+		var sMessage = $('#texte').val();
+
+		$.ajax(
+			{
+				url:"http://localhost:8888/portefolio/contact-form.php",
+				type:"post",
+				data:{
+					nom:sNom,
+					email:sEmail,
+					texte:sMessage,
+					estAjax:1
+				},
+				success:function(data){
+					console.log(data);
+					if($('#sendResponse')){
+						$('#sendResponse').remove();
+						$('#nom').val('');
+						$('#email').val('');
+						$('#texte').val('');
+						$('<span id="sendResponse">'+data+'</span>').appendTo('#contactForm');
+					}else{
+						$('<span id="sendResponse">'+data+'</span>').appendTo('#contactForm');
+					}
+					
+				}
+
+			}
+		)
+	}
+
 	//loaded pages
 	$(function(){
 		$('a[href^="#"]').on("click", smoothScroll);
-		console.log('bien chargé');
+		$('#sendContactMail').on("click", checkContactForm);
 	});
 
 
