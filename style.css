@@ -579,7 +579,7 @@ div+div+div .errors{
     box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, .5);
     text-shadow: 0px 1px 0px #555;
     filter: dropshadow(color=#555, offx=0, offy=1);
-    margin-bottom: 3em;
+    margin-bottom: 1em;
 }
 
 #contactForm button:hover{
@@ -596,6 +596,16 @@ div+div+div .errors{
 #contactForm button:active{
     -webkit-box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.4), 0px 1px 0px 0px #fff;        
     box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.4), 0px 1px 0px 0px #fff;
+}
+
+#sendResponse{
+    border: 2px solid #8EC549;
+    background-color: #D0FF95;
+    padding: 1em;
+    width: 93%;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 1em;
 }
 
 .errors{
