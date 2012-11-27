@@ -1,17 +1,18 @@
 ﻿        <footer>
-            <div id="socialInfo">
+            <section id="socialInfo">
+                <h2>Suivez-moi</h2>
                 <ul>
-                    <li class="social">
+                    <li class="social icon-linkedin">
                         <a href="http://lnkd.in/Z8HBPA" title="vister ma page linkedin">mon linkedin</a>
                     </li>
-                    <li class="social">
+                    <li class="social icon-facebook">
                         <a href="http://www.facebook.com/GioGio8" title="vister ma page facebook">mon facebook</a>
                     </li>
                 </ul>
-            </div>
-            <div id="newsLetter">
+            </section>
+            <section id="newsLetter">
                 <?php dynamic_sidebar(); ?>
-            </div>
+            </section>
             <div id="copy">
                 <p>2012-Designed by Iacuzzo Giovanni©</p>
             </div>
