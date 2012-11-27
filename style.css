@@ -511,6 +511,7 @@ section#home strong{
 
 #coord textarea{
     width: 88%;
+    height: 15em;
     padding-left: 3em;
     padding-top: 0.5em;
     padding-right: 0.5em;
@@ -539,8 +540,8 @@ section#home strong{
 }
 
 .icon-pencil{
-    height: 90%;
-    line-height: 180px;
+    height: 14.6em;
+    line-height: 15em;
     top: 0.6em;
 }
 
@@ -554,6 +555,10 @@ section#home strong{
 
 .icon-paper-plane{
     position: inherit;
+}
+
+div+div+div .errors{
+    top: 0;
 }
 
 #contactForm button{
