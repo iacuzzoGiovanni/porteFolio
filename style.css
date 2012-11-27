@@ -593,6 +593,18 @@ section#home strong{
     box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.4), 0px 1px 0px 0px #fff;
 }
 
+.errors{
+    color: red;
+    font-weight: bold;
+    margin: 0 !important;
+    position: relative;
+    top: -1em;
+}
+
+div .errors:first-child{
+    top: 0;
+}
+
 body>footer section{
     max-width: 1000px;
     margin: 0 auto;

@@ -9,12 +9,12 @@
 		if(filter_var($email, FILTER_VALIDATE_EMAIL)){
 			$emailSender = $email;
 		}else{
-			$msg.'L’email semble incorrect ';
+			$msg . 'L’email semble incorrect ';
 		}
 		
 		$to = 'iacuzzogiovanni@gmail.com';
 		
-		$message = $nom . "\n\n" .$texte;
+		$message = $nom . "\n\n" . $texte;
 
 		$headers = 'From: iacuzzogiovanni@gmail.com' . "\r\n" .
 			       'Reply-To: ' . $emailSender . "\r\n" .
@@ -27,6 +27,6 @@
 		if (!$estAjax) {
 			header('Location: http://www.iacuzzo-giovanni.com#contact');
 		}else{
-			echo($msg?$msg:'ok');
+			echo($msg?$msg:'Le formulaire de contact à bien été envoyé');
 		}
 	}
