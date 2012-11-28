@@ -2,16 +2,19 @@
             <section id="socialInfo">
                 <h2>Suivez-moi</h2>
                 <ul>
-                    <li class="social icon-linkedin">
-                        <a href="http://lnkd.in/Z8HBPA" title="vister ma page linkedin">mon linkedin</a>
+                    <li>
+                        <a href="http://lnkd.in/Z8HBPA" title="vister ma page linkedin" class="social icon-linkedin"><span>mon linkedin</span></a>
                     </li>
-                    <li class="social icon-facebook">
-                        <a href="http://www.facebook.com/GioGio8" title="vister ma page facebook">mon facebook</a>
+                    <li>
+                        <a href="http://www.facebook.com/GioGio8" title="vister ma page facebook" class="social icon-facebook"><span>mon facebook</span></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/IacuzzoG" title="vister ma page twitter" class="social icon-twitter-bird"><span>mon twitter</span></a>
                     </li>
                 </ul>
             </section>
             <section id="newsLetter">
-                <?php dynamic_sidebar(); ?>
+                <ul><?php dynamic_sidebar(); ?></ul>
             </section>
             <div id="copy">
                 <p>2012-Designed by Iacuzzo Giovanni©</p>
