@@ -64,10 +64,32 @@
 		e.preventDefault();
 	};
 
+	var checkNewsletterForm = function(e){
+		var $newsForm = $('#newsLetterForm'),
+			isEmailOk = checkIsNotEmpty('e-mail') && checkIsMailOk('e-mail');
+
+		if(isEmailOk){
+
+			$.ajax({
+				url:"http://iacuzzo-giovanni.com/mailchimp/mcapi_listSubscribe.php",
+				type:"post",
+				data: $newsForm.serialize(),
+				success:function(data){
+					$newsForm.append('<span id="sendResponse">'+data+'</span>')[0].reset();
+				},
+				error:function(data){
+					$("#e-mail").after('<p class="errors">'+data.responseText+'</p>');
+				}
+			});
+		}
+		e.preventDefault();
+	};
+
 	//loaded pages
 	$(function(){
 		$('a[href^="#"]').on("click", smoothScroll);
 		$('#contactForm').on("submit", checkContactForm);
+		$('#newsLetterForm').on("submit", checkNewsletterForm);
 	});
 
 
