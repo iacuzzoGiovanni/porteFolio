@@ -1,5 +1,6 @@
 <?php
-
+	session_start();
+	
 	add_action('after_setup_theme', 'portefolio_setup');
 	add_action('init', 'create_post_type');
 

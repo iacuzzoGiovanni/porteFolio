@@ -35,10 +35,10 @@
 			return false;
 		}
 		return true;
-	}
+	};
 
 	var checkContactForm = function(e){
-
+		
 		// keep this before the checks to remove the previous error messages
 		$('#sendResponse, .errors').remove();
 
@@ -50,7 +50,7 @@
 		if( isNameOk && isemailOk && istextOk ){
 
 			$.ajax({
-				url:"http://iacuzzo-giovanni.com/contact-form.php",
+				url: $contactForm.attr('action'),
 				type:"post",
 				data: $contactForm.serialize(),
 				success:function(data){

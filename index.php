@@ -84,23 +84,61 @@ get_header();
             </section>
 		<section id="contact">
 			<header>
-                <h1>
-                	<?php 
-						$page_id = 17;
-						$page_data = get_page($page_id);
-						echo($page_data->post_title); 
-					?>
-				</h1>
+                <h1>Contact</h1>
             </header>
-            <?php 
-                $query = new WP_Query( 'page_id=17' );
-                while($query->have_posts()):
-                    $query->the_post();
-            ?>
-                <?php the_content(); ?>
-            <?php
-                endwhile;
-            ?>
+            <article>
+                <div id="country">
+                    <a href="https://maps.google.be/maps?q=li%C3%A8ge&hl=fr&ie=UTF8&sll=50.154465,4.624975&sspn=2.305244,5.817261&hnear=Li%C3%A8ge,+R%C3%A9gion+wallonne&t=m&z=12" title="aller voir liège sur la google map">aller vers la map google</a>
+                </div>
+                <div id="coord">
+                    <h3>Où je vis</h3>
+                    <p>Non loin du coeur de la cité ardente</p>
+                    <h3>Comment me joindre&nbsp;?</h3>
+                    <p>Tel&nbsp;: <a href="tel:+32499385833" title="téléphoner à Giovanni">+32 (0) 499 38 58 33</a></p>
+                    <p>E-mail : <a href="mailto:iacuzzogiovanni@gmail.com" title="envoyer un mail à iacuzzogiovanni@gmail.com">iacuzzogiovanni@gmail.com</a></p>
+                    <h3>Ou bien, joignez-moi via ce formulaire</h3>
+                    <?php 
+                        $erreurNom = $_SESSION['emptyNom']; 
+                        $erreurEmail = $_SESSION['errorMail'];
+                        $erreurMessage = $_SESSION['emptyTexte'];
+                        session_destroy();
+                    ?>
+                    <form id="contactForm" action="<?php bloginfo('template_directory'); ?>/contact-form.php" method="post">
+                        <fieldset>
+                            <div>
+                                <label for="nom" class="icon-user"><span>user name</span></label>
+                                <input type="text" name="nom" id="nom" placeholder="mon nom" />
+                            </div>
+                            <?php if(isset($erreurNom)): ?>
+                                <div>
+                                    <p class="errors"><?php echo($erreurNom);?></p>
+                                </div>
+                            <?php endif; ?>
+                            <div>
+                                <label for="email" class="icon-email"><span>user e-mail</span></label>
+                                <input type="email" name="email" id="email" placeholder="mon e-mail" />
+                            </div>
+                            <?php if(isset($erreurEmail)): ?>
+                                <div>
+                                    <p class="errors"><?php echo($erreurEmail);?></p>
+                                </div>
+                            <?php endif; ?>
+                            <div>
+                                <label for="texte" class="icon-pencil"><span>user message</span></label>
+                                <textarea name="texte" id="texte" rows="10" placeholder="mon message"></textarea>
+                            </div>
+                            <?php if(isset($erreurMessage)): ?>
+                                <div>
+                                    <p class="errors"><?php echo($erreurMessage);?></p>
+                                </div>
+                            <?php endif; ?>
+                            <div>
+                                <button type="submit"><span class="icon-paper-plane"></span>envoyer</button>
+                            <div>
+                        </fieldset>
+                    </form>
+                </div>
+            </article>
             <footer>
                 <a href="#html" title="aller vers le haut du site">vers le haut</a>
             </footer>

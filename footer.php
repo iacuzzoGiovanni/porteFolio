@@ -2,11 +2,16 @@
             <div>
                 <section id="newsLetter">
                     <h2>Abonnez-vous à ma newsletter</h2>
-                    <form id="newsLetterForm" action="mailchimp/mcapi_listSubscribe.php" method="post">
+                    <form id="newsLetterForm" action="http://iacuzzo-giovanni.com/mailchimp/mcapi_listSubscribe.php" method="post">
                         <fieldset>
-                            <input type="email" name="email" id="e-mail" placeholder="entrez votre e-mail" />
+                            <input type="email" name="e-mail" id="e-mail" placeholder="entrez votre e-mail" />
                             <button type="submit">s'abonner</button>
                         </fieldset>
+                        <?php if(isset($_SESSION['test'])): ?>
+                            <fieldset>
+                                <p class="errors"><?php echo($_SESSION['test']);?></p>
+                            </fieldset>
+                        <?php endif; ?>
                     </form>
                 </section>
                 <section id="socialInfo">

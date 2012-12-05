@@ -1,20 +1,39 @@
 <?php
+	session_start();
 	
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-		
 		extract($_POST);
+		$is_ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) ? true : false;
 		$msg = '';
-
-		if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-			$emailSender = $email;
+		
+		if(!empty($email)){
+			if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+				$emailSender = $email;
+			}else{
+				$msg.='L’email semble incorrect ';
+				$_SESSION['errorMail'] = 'l\'email semble incorrect';
+				if( $is_ajax ){
+					header('HTTP/1.0 404 Not Found');
+					echo $msg;
+					exit();
+				}
+			}
 		}else{
-			$msg . 'L’email semble incorrect ';
+			$_SESSION['errorMail'] = 'le champ e-mail ne peut pas être vide';
+		}
+		
+		if(empty($nom)){
+			$_SESSION['emptyNom'] = 'le champ nom ne peut pas être vide';
+		}
+
+		if(empty($texte)){
+			$_SESSION['emptyTexte'] = 'le champ message ne peut pas être vide';
 		}
 		
 		$to = 'iacuzzogiovanni@gmail.com';
 		
-		$message = $nom . "\n\n" . $texte;
+		$message = $nom . "\n\n" .$texte;
 
 		$headers = 'From: iacuzzogiovanni@gmail.com' . "\r\n" .
 			       'Reply-To: ' . $emailSender . "\r\n" .
@@ -22,10 +41,9 @@
 
 		mail($to, 'aucun sujet', $message, $headers);
 
-
 		
-		if (!$estAjax) {
-			header('Location: http://www.iacuzzo-giovanni.com#contact');
+		if (!$is_ajax) {
+			header('Location: '.$_SERVER['HTTP_REFERER'].'/#contact');
 		}else{
 			echo($msg?$msg:'Le formulaire de contact à bien été envoyé');
 		}
