@@ -110,27 +110,23 @@ get_header();
                                 <input type="text" name="nom" id="nom" placeholder="mon nom" />
                             </div>
                             <?php if(isset($erreurNom)): ?>
-                                <div>
-                                    <p class="errors"><?php echo($erreurNom);?></p>
-                                </div>
+                                <p class="errors"><?php echo($erreurNom);?></p>
                             <?php endif; ?>
                             <div>
                                 <label for="email" class="icon-email"><span>user e-mail</span></label>
                                 <input type="email" name="email" id="email" placeholder="mon e-mail" />
                             </div>
                             <?php if(isset($erreurEmail)): ?>
-                                <div>
-                                    <p class="errors"><?php echo($erreurEmail);?></p>
-                                </div>
+                                <p class="errors"><?php echo($erreurEmail);?></p>
                             <?php endif; ?>
                             <div>
                                 <label for="texte" class="icon-pencil"><span>user message</span></label>
                                 <textarea name="texte" id="texte" rows="10" placeholder="mon message"></textarea>
                             </div>
                             <?php if(isset($erreurMessage)): ?>
-                                <div>
-                                    <p class="errors"><?php echo($erreurMessage);?></p>
-                                </div>
+                            <div>
+                                <p class="errors"><?php echo($erreurMessage);?></p>
+                            </div>
                             <?php endif; ?>
                             <div>
                                 <button type="submit"><span class="icon-paper-plane"></span>envoyer</button>

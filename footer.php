@@ -2,14 +2,14 @@
             <div>
                 <section id="newsLetter">
                     <h2>Abonnez-vous à ma newsletter</h2>
-                    <form id="newsLetterForm" action="http://iacuzzo-giovanni.com/mailchimp/mcapi_listSubscribe.php" method="post">
+                    <form id="newsLetterForm" action="<?php bloginfo('template_directory'); ?>/mailchimp/mcapi_listSubscribe.php" method="post">
                         <fieldset>
                             <input type="email" name="e-mail" id="e-mail" placeholder="entrez votre e-mail" />
                             <button type="submit">s'abonner</button>
                         </fieldset>
-                        <?php if(isset($_SESSION['test'])): ?>
+                        <?php if(isset($_SESSION['errors'])): ?>
                             <fieldset>
-                                <p class="errors"><?php echo($_SESSION['test']);?></p>
+                                <p class="errors"><?php echo($_SESSION['errors']);?></p>
                             </fieldset>
                         <?php endif; ?>
                     </form>
@@ -28,9 +28,15 @@
                         </li>
                     </ul>
                 </section>
-                <div id="copy">
-                    <p>2012-Designed by Iacuzzo Giovanni©</p>
-                </div>
+                <?php if(isset($_SESSION['errors'])): ?>
+                    <div id="copy" class="copyErr">
+                        <p>2012-Designed by Iacuzzo Giovanni©</p>
+                    </div>
+                <?php else: ?>
+                    <div id="copy">
+                        <p>2012-Designed by Iacuzzo Giovanni©</p>
+                    </div>
+                <?php endif; ?>
             </div>
         </footer>
         <script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.8.2.js"></script>

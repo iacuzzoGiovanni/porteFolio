@@ -22,6 +22,9 @@
             </hgroup>
         </header>
 	<section id="blog">
+        <header>
+            <h3>Vous êtes sur mon blog, enjoy!</h3>
+        </header>
 		<?php 
         	$query = new WP_Query( 'category_name=blog' );
         	while($query->have_posts()):
@@ -36,14 +39,14 @@
                     ?>
                 </div>
                 <div class="jour">
-                    <p><?php echo get_the_date('j'); ?></p>
-                    <p><?php echo substr(get_the_date('F'), 0, 3); ?></p>
+                    <time><?php echo get_the_date('j'); ?></time>
+                    <time><?php echo substr(get_the_date('F'), 0, 3); ?></time>
                 </div>
                 <div class="message">
                     <h1>
                         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                     </h1>
-                    <p>posté à <strong><?php the_time('G:i'); ?></strong> par <strong><?php echo get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name'); ?></strong> en <strong><?php echo get_the_date('Y'); ?></strong></p>
+                    <p class="postedAt">posté à <strong><?php the_time('G:i'); ?></strong> par <strong><?php echo get_the_author_meta('first_name') . ' ' . get_the_author_meta('last_name'); ?></strong> en <strong><?php echo get_the_date('Y'); ?></strong></p>
                    
                     <?php the_content(); ?>
                 </div>
