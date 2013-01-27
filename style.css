@@ -349,6 +349,7 @@ body>footer>div{
     opacity: 0;
     text-shadow: none;
     position: relative;
+    text-align: center;
     
     /* Firefox */
     -moz-transition: opacity 0.5s ease 0s;
@@ -973,6 +974,64 @@ h2#workTitle{
     #contact section+section h3{
         margin-top: 1em;
     }
+
+    #work article{
+        text-align: center;
+        display: block;
+    }
+
+    .infoMask{
+        opacity: 1;
+        background-color: rgba(0, 174, 240, 0.4);
+    }
+
+    .infoMask h3{
+        top: 16em;
+    }
+
+    .infoMask h3:hover{
+        top: 16em;
+    }
+
+    .infoMask a{
+        top: -10em;
+    }
+
+    .infoMask p{
+        transform: none;
+        top: 3em;
+        text-shadow: 0px 0px 3px #000;
+        filter: dropshadow(color=#000, offx=0, offy=0);
+    }
+
+    #country, #coord{
+        float: none;
+        text-align: center;
+    }
+
+    #contactForm div{
+        text-align: left;
+    }
+
+    #copy{
+        position: relative;
+        top: 2em;
+        text-align: center;
+    }
+
+    body > footer{
+        padding: 1em;
+    }
+
+    #socialInfo, #newsLetter{
+        float: none;
+        height: auto;
+        margin-bottom: 1em;
+    }
+
+    nav li{
+        display: inline-block;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px){
@@ -980,18 +1039,12 @@ h2#workTitle{
 }
 
 @media only screen and (max-width: 767px){
-    #work article{
-        text-align: left;
-    }
+
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px){
     #work article{
         text-align: center;
-    }
-
-    nav li{
-        display: block;
     }
 }
 
@@ -1014,12 +1067,71 @@ h2#workTitle{
     #newsLetterForm button{
         margin-top: -0.1em;
         position: inherit;
-        width: 92%
+        width: 17em;
     }
 
     #e-mail{
-        width: 85%;
+        width: 16em;
+        outline: none;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        border: none;
     }
+
+    #coord, country{
+        float: none;
+    }
+
+    #coord{
+        margin-left: 0;
+        width: inherit;
+    }
+
+    #contactForm div{
+        width: 16em;
+        margin: 0 auto;
+    }
+
+    #contactForm div:last-child{
+        text-align: center;
+    }
+
+    #contactForm button{
+        width: 17em;
+    }
+
+    #coord textarea{
+        width: auto;
+    }
+
+    #about li{
+        width: 100%;
+    }
+
+    #work article{
+        padding: 0;
+    }
+
+    #coord input{
+        box-sizing:border-box;
+        -moz-box-sizing:border-box; /* Firefox */
+        -webkit-box-sizing:border-box; /* Safari */
+        width: 100%;
+    }
+
+    #contactForm button {
+        width: 100%;
+    }
+
+    #country{
+        display: none;
+    }
+
+    nav a{
+        margin: 0;
+    }
+    
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),

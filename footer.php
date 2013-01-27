@@ -4,8 +4,8 @@
                     <h2>Abonnez-vous à ma newsletter</h2>
                     <form id="newsLetterForm" action="<?php bloginfo('template_directory'); ?>/mailchimp/mcapi_listSubscribe.php" method="post">
                         <fieldset>
-                            <input type="email" name="e-mail" id="e-mail" placeholder="entrez votre e-mail" />
-                            <button type="submit">s'abonner</button>
+                            <input type="email" name="e-mail" id="e-mail" placeholder="entrez votre e-mail" /><!--
+                            --><button type="submit">s'abonner</button>
                         </fieldset>
                         <?php if(isset($_SESSION['errors'])): ?>
                             <fieldset>
