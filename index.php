@@ -4,13 +4,15 @@ get_header();
 
 ?>
 
-	<section>
+	<div>
 		<section id="home">
-			<?php 
-				$page_id = 13;
-				$page_data = get_page($page_id);
-				echo($page_data->post_content); 
-			?>
+            <h1>
+                <?php 
+                    $page_id = 13;
+                    $page_data = get_page($page_id);
+                    echo($page_data->post_content); 
+                ?>
+            </h1>
 		</section>
 		<section id="about">
 			<header>
@@ -139,7 +141,7 @@ get_header();
                 <a href="#html" title="aller vers le haut du site">vers le haut</a>
             </footer>
 		</section>
-	</section>
+	</div>
 
 <?php
 

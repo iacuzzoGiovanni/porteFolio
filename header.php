@@ -32,6 +32,7 @@
                 </h2>
             </hgroup>
             <nav>
+                <h1 id="menuNavigationNone">navigation menu</h1>
                 <?php $defaults = array(
                     'theme_location'  => 'header-menu',
                     'menu'            => '', 

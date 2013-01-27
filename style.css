@@ -70,7 +70,9 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
+#menuNavigationNone{
+    display: none;
+}
 
 body{
     font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
