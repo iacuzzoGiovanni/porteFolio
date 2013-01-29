@@ -4,10 +4,9 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<html id="html">
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta charset="<?php bloginfo('charset'); ?> " />
+        <meta charset="utf-8" />
         <meta name="description" content="Portfolio de Iacuzzo Giovanni" />
         <meta name="keywords" content="porte, folio, porte-folio, portfolio, Giovanni, Iacuzzo, Giovanni iacuzzo, designer, web, internet, web-designer, webdesigner, mobile, web developpeur, webdeveloppeur, web developer, developer, developpeur, mobile design, web mobile, web design" />
         <meta name="author" content="Iacuzzo Giovanni" />
@@ -18,7 +17,7 @@
         <script src="<?php bloginfo('template_directory'); ?>/js/modernizr-2.6.2.min.js"></script>
         <?php wp_head(); ?>
     </head>
-    <body id="home">
+    <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->

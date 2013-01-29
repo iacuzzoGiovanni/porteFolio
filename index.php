@@ -14,6 +14,34 @@ get_header();
                 ?>
             </h1>
 		</section>
+        <section id="work">
+            <header>
+                <h1>Mes réalisations</h1>
+            </header>
+            <article>
+                <?php
+                $mesCustoms2 = new WP_Query(array('post_type' => 'travaux', 'posts_per_page' => -1));
+                while($mesCustoms2->have_posts()):
+                    $mesCustoms2->the_post();
+                    echo('<div class="imgWork">');
+                        the_post_thumbnail(array(250,200));
+                        echo('<div class="infoMask">');
+                            echo('<h3>');
+                                the_title();
+                            echo('</h3>');
+                            the_content();
+                            echo('<a href="');
+                                the_permalink();
+                            echo('">Voir en grand</a>');
+                        echo('</div>');
+                    echo('</div>');
+                endwhile;
+                ?>
+            </article>
+            <footer>
+                <a href="#html" title="move to the top">go to the top page</a>
+            </footer>
+        </section>
 		<section id="about">
 			<header>
                 <h1>
@@ -56,34 +84,6 @@ get_header();
                 <a href="#html" title="aller vers le haut du site">vers le haut</a>
             </footer>
 		</section>
-		<section id="work">
-                <header>
-                    <h1>Mes réalisations</h1>
-                </header>
-                <article>
-                    <?php
-                    $mesCustoms2 = new WP_Query(array('post_type' => 'travaux', 'posts_per_page' => -1));
-                    while($mesCustoms2->have_posts()):
-                    	$mesCustoms2->the_post();
-	                    echo('<div class="imgWork">');
-	                        the_post_thumbnail(array(250,200));
-	                        echo('<div class="infoMask">');
-		                        echo('<h3>');
-		                        	the_title();
-		                        echo('</h3>');
-		                        the_content();
-		                        echo('<a href="');
-		                        	the_permalink();
-		                        echo('">Voir en grand</a>');
-		                    echo('</div>');
-	                    echo('</div>');
-                    endwhile;
-                    ?>
-                </article>
-                <footer>
-                    <a href="#html" title="move to the top">go to the top page</a>
-                </footer>
-            </section>
 		<section id="contact">
 			<header>
                 <h1>Contact</h1>
@@ -132,7 +132,7 @@ get_header();
                             <?php endif; ?>
                             <div>
                                 <button type="submit"><span class="icon-paper-plane"></span>envoyer</button>
-                            <div>
+                            </div>
                         </fieldset>
                     </form>
                 </div>

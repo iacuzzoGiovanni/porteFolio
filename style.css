@@ -188,7 +188,8 @@ nav a:hover{
     background-position: -8px -183px;
 }
 
-section#home p{
+section#home span{
+    display: block;
     max-width: 960px;
     margin: 0 auto;
     color: #00afec;
@@ -199,7 +200,7 @@ section#home p{
 }
 
 section#home strong{
-    font-size: 1.3em;
+    font-size: 1.25em;
     font-weight: bold;
 }
 
@@ -1132,6 +1133,14 @@ h2#workTitle{
 
     nav a{
         margin: 0;
+    }
+
+    #GioIac a{
+        font-size: 2em;
+    }
+
+    #GioIac + h2{
+        font-size: 0.9em;
     }
     
 }
