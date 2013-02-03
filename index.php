@@ -23,6 +23,9 @@ get_header();
                 $mesCustoms2 = new WP_Query(array('post_type' => 'travaux', 'posts_per_page' => -1));
                 while($mesCustoms2->have_posts()):
                     $mesCustoms2->the_post();
+                    $atach = get_post_thumbnail_id();
+                    $data = get_post_meta($atach);
+                    $data = $data['_wp_attachment_image_alt'][0];
                     echo('<div class="imgWork">');
                         the_post_thumbnail(array(250,200));
                         echo('<div class="infoMask">');
@@ -30,9 +33,15 @@ get_header();
                                 the_title();
                             echo('</h3>');
                             the_content();
-                            echo('<a href="');
-                                the_permalink();
-                            echo('">Voir en grand</a>');
+                            if(!$data){
+                                echo('<a href="');
+                                    the_permalink();
+                                echo('">Voir en grand</a>');
+                            }else{
+                                echo('<a href="');
+                                echo $data;
+                                echo('">aller vers le site</a>');
+                            }
                         echo('</div>');
                     echo('</div>');
                 endwhile;
